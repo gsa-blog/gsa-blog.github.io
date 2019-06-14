@@ -77,7 +77,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "here we can set on _config.yml #Sidebar settings<br>离开世界之前，一切都是过程"
+sidebar-about-description: "Gene Set Analysis (GSA) is arguably the most common functional interpretation procedure, and consists on comparing a query gene set to a reference database using a specific statistical method. This blog dicusses the sources, application, and consequences of such methods.<br>"
 sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
