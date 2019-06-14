@@ -2,8 +2,8 @@
 title: GSA Blog
 SEOTitle: GSA Blog
 header-img: img/home-bg.jpg
-email: h15016211223@163.com
-description: "Bioinfomatics  GSA centre"
+email: thegsacentral@gmail.com
+description: "A Gene Set Analysis Blog"
 url: "http://gsa-blog.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -57,7 +57,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: hux
+#disqus_username: hux
 
 # Netease settings
 netease_comment: false
@@ -102,28 +102,10 @@ page-mathjax: false
 # Friends
 friends: [
     {
-        title: "Here set from config.yml _#Friends , you can set links to other place you want to link ",
-        href: "https://xiaowei3223.github.io/"
+        title: "Mora Lab",
+        href: "https://github.com/mora-lab/"
     },{
-        title: "Antonio Mora",
-        href: "https://github.com/antonio-mora"
-    },{
-        title: "xiaowei",
-        href: "https://github.com/xiaowei3223"
-    },{
-        title: "mora-lab",
-        href: "https://mora-lab.github.io/"
-    },{
-        title: "gsa-central",
-        href: "https://gsa-central.github.io/"
-    },{
-        title: "chegnshu",
-        href: "https://github.com/Chengshu21"
-    },{
-        title: "shauryajauhari",
-        href: "https://github.com/shauryajauhari"
-    },{
-        title: "SongQMei",
-        href: "https://github.com/SongQMei"
+        title: "GSA Central",
+        href: "https://github.com/gsa-central/"
     }
 ]
