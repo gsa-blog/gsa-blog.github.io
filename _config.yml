@@ -69,10 +69,8 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics  
-#here we should change ours.
-#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-#ga_domain: huangxuan.me
-
+ga_track_id: 'UA-141650531-3'            # Format: UA-xxxxxx-xx
+ga_domain: gsa-blog.github.io
 
 
 # Sidebar settings
@@ -103,9 +101,9 @@ page-mathjax: false
 friends: [
     {
         title: "Mora Lab",
-        href: "https://github.com/mora-lab/"
+        href: "https://mora-lab.github.io/"
     },{
         title: "GSA Central",
-        href: "https://github.com/gsa-central/"
+        href: "https://gsa-central.github.io/"
     }
 ]
