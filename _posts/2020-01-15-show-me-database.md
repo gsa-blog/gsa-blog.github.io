@@ -6,8 +6,19 @@ author: "Antonio Mora"
 header-style: text
 lang: en
 tags:
-  - GSA Central
   - GSA
+  - Databases
+  - KEGG
+  - Reactome
+  - Wikipathways
+  - Pathway Commons
+  - Gene Ontology
+  - Disease Ontology
+  - GeneSetDB
+  - MSigDB
+  - FunCoup
+  - GeneMania
+  - MELODI
 ---
 
 The core of all GSA methods is the comparison between a query dataset (gene list or gene rank) and an annotated database (pathway database, gene set database, or annotated ontology). Most GSA software give the user one or more options to choose a database, with KEGG and GO being the most common options; however, our study may also need a database not included in the software, or a more recent version of the database, or we may want to explore additional databases, and, therefore, some knowledge of the existing alternatives (and some minor bioinformatics work) may be useful. In this post I will briefly review such databases.
