@@ -19,7 +19,7 @@ tags:
   - FunCoup
   - GeneMania
   - MELODI
-  - GSEAbase
+  - GSEABase
 ---
 
 The core of all GSA methods is the comparison between a query dataset (gene list or gene rank) and an annotated database (pathway database, gene set database, or annotated ontology). Most GSA software give the user one or more options to choose a database, with KEGG and GO being the most common options; however, our study may also need a database not included in the software, or a more recent version of the database, or we may want to explore additional databases, and, therefore, some knowledge of the existing alternatives (and some minor bioinformatics work) may be useful. In this post I will briefly review such databases.
@@ -121,7 +121,7 @@ genes <- getBM (attributes = c('hgnc_symbol', 'ensembl_transcript_id', 'go_id'),
 ```
 
 ### Adding your own gene sets:
-Finally, if you have your own gene sets, you may build R gene set objects with them and share them with the scientific community. Building an RData object would be enough, but it would be even better if you can store them in the same format used by the previous databases, which can be recognized by some GSA tools. In addition, tools for building gene sets have also been developed; see, for example, GSEAbase ([http://bioconductor.org/packages/release/bioc/vignettes/GSEABase/inst/doc/GSEABase.pdf](http://bioconductor.org/packages/release/bioc/vignettes/GSEABase/inst/doc/GSEABase.pdf)).
+Finally, if you have your own gene sets, you may build R gene set objects with them and share them with the scientific community. Building an RData object would be enough, but it would be even better if you can store them in the same format used by the previous databases, which can be recognized by some GSA tools. In addition, tools for building gene sets have also been developed; see, for example, GSEABase ([http://bioconductor.org/packages/release/bioc/vignettes/GSEABase/inst/doc/GSEABase.pdf](http://bioconductor.org/packages/release/bioc/vignettes/GSEABase/inst/doc/GSEABase.pdf)).
 
 ### Discussion and thoughts:
 As I said in the beginning, sometimes you may want to go beyond the databases offered by the GSA tool that you are using. Choosing a new database resource depends on which kind of information are you looking for (specific pathways? functions in the “Biological Process” Gene Ontology? specific disease association? all of them?). In general, we must keep in mind that pathways contain structural information than gene sets lack, and gene sets contain much more information than just pathways. In addition, in pathways, some genes can be up-regulated and some down-regulated at a given time, while gene sets may change in a coordinated fashion (either all genes up-regulated or down-regulated in a given disease, for example). It has been already discussed that some methodologies were designed to detect coordinated changes, and therefore researchers should be aware of that when choosing a pair of a GSA method and an annotated database (22). In general, over-representation analysis (ORA) and functional class scoring (FCS) methods work with gene set databases (including pathways), pathway databases are necessary for pathway topology based (PT) methods, while FANs are necessary for network interaction (NI) methods.
