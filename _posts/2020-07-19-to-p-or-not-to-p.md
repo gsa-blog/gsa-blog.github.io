@@ -148,23 +148,22 @@ This plot is a beautiful summary of all the discussion. The x-axis contains all 
 
 [3] HAAF, J.M., et al. (2019), Retire significance, but still test hypotheses, Nature 567, 461, [https://doi.org/10.1038/d41586-019-00972-7](https://doi.org/10.1038/d41586-019-00972-7)
 
-[4] Confidence intervals, https://www.mathsisfun.com/data/confidence-interval.html, retrieved: 2020-05-05
+[4] Confidence intervals, [https://www.mathsisfun.com/data/confidence-interval.html](https://www.mathsisfun.com/data/confidence-interval.html), retrieved: 2020-05-05
 
-[5] Computing confidence intervals, http://www.cyclismo.org/tutorial/R/confidence.html, retrieved: 2020-05-05
+[5] Computing confidence intervals, [http://www.cyclismo.org/tutorial/R/confidence.html](http://www.cyclismo.org/tutorial/R/confidence.html), retrieved: 2020-05-05
 
-[6] Plot data with confidence intervals, https://stackoverflow.com/questions/14069629/how-can-i-plot-data-with-confidence-intervals, retrieved: 2020-05-05
+[6] Plot data with confidence intervals, [https://stackoverflow.com/questions/14069629/how-can-i-plot-data-with-confidence-intervals](https://stackoverflow.com/questions/14069629/how-can-i-plot-data-with-confidence-intervals), retrieved: 2020-05-05
 
-[7] Effect size, https://www.leeds.ac.uk/educol/documents/00002182.htm, retrieved: 2020-05-05
+[7] Effect size, [https://www.leeds.ac.uk/educol/documents/00002182.htm](https://www.leeds.ac.uk/educol/documents/00002182.htm), retrieved: 2020-05-05
 
-[8] Effect size estimation, http://core.ecu.edu/psyc/wuenschk/StatHelp/Effect%20Size%20Estimation.pdf, retrieved: 2020-05-05
+[8] Effect size estimation, [http://core.ecu.edu/psyc/wuenschk/StatHelp/Effect%20Size%20Estimation.pdf](http://core.ecu.edu/psyc/wuenschk/StatHelp/Effect%20Size%20Estimation.pdf), retrieved: 2020-05-05
 
 [9] CUMMING, Geoff (2012), Understanding the new statistics: Effect sizes, confidence intervals, and meta-analysis, 1st edition, Routledge.
 
 [10] CUMMING, G. and CALIN-JAGEMAN, R. (2016), Introduction to the new statistics: Estimation, open science, and beyond, 1st edition, Routledge.
 
-[11] HARRISON P., et al. (2019), Topconfects: a package for confident effect sizes in differential expression analysis provides a more biologically useful ranked gene list, 
-Genome Biology, https://doi.org/10.1186/s13059-019-1674-7
+[11] HARRISON P., et al. (2019), Topconfects: a package for confident effect sizes in differential expression analysis provides a more biologically useful ranked gene list, Genome Biology, [https://doi.org/10.1186/s13059-019-1674-7](https://doi.org/10.1186/s13059-019-1674-7)
 
-[12] YAARI et al. (2013), Quantitative set analysis for gene expression: a method to quantify gene set differential expression including gene-gene correlations, Nucleic Acids Research, https://doi.org/10.1093/nar/gkt660
+[12] YAARI et al. (2013), Quantitative set analysis for gene expression: a method to quantify gene set differential expression including gene-gene correlations, Nucleic Acids Research, [https://doi.org/10.1093/nar/gkt660](https://doi.org/10.1093/nar/gkt660)
 
-[13] Statistics for Psychology, Null hypothesis testing and effect sizes, https://people.bath.ac.uk/pssiw/stats2/page2/page14/page14.html, retrieved: 2020-05-05
+[13] Statistics for Psychology, Null hypothesis testing and effect sizes, [https://people.bath.ac.uk/pssiw/stats2/page2/page14/page14.html](https://people.bath.ac.uk/pssiw/stats2/page2/page14/page14.html), retrieved: 2020-05-05
