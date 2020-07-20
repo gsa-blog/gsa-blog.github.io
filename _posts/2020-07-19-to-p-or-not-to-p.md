@@ -30,11 +30,6 @@ Let’s dig deeper on that definition: The null hypothesis (H0) is the statement
 
 Misunderstanding the meaning of the p-values is the source of their misuse, and their misuse is the reason why some statisticians are calling for their retirement.
 
-([https://reactome.org/PathwayBrowser/](https://reactome.org/PathwayBrowser/)) 
-![A pathway from WikiPathways](/img/wikip.png)
-
-_A pathway from WikiPathways_
-
 ### 2. p all over the place:
 The use of p-values has been questioned for a long time but, in recent years, it has been under a fiery attack. One of the most recent and influential papers was last year’s “Retire statistical significance” in Nature, signed by V. Amrhein and more than 800 other scientists [1]. However, this is just the tip of a long discussion. Just look at this list: “P values are only an index to evidence: 20th- vs. 21st-century statistical science” (Burnham and Anderson), “In defense of P values” (Murtaugh), “Understanding the new statistics: Effect sizes, confidence intervals, and meta-analysis” (Cumming), and all the books by Geoff Cumming (“Understanding the new statistics”, “Introduction to the new statistics”). Some of the papers display humorous titles such as “The earth is round (p < .05)” (Cohen) or, my favorite, “To P or not to P” (Barber and Ogle)... Nothing like a good statistical pun to make you “p” your pants…
 
@@ -65,6 +60,10 @@ df = data.frame(x = 1:10, mean=runif(10,1,2), lower=runif(10,0,1), upper=runif(1
 require(ggplot2)
 ggplot(df, aes(x=x, y=mean)) + geom_point(size=4) + geom_errorbar(aes(ymax=upper, ymin=lower))
 ```
+
+![A pathway from WikiPathways](/img/wikip.png)
+
+_A pathway from WikiPathways_
 
 An effect size is an alternative to statistical significance tests to quantify the differences between two groups. Effect sizes can be quantitative values of measured phenomena, or even a ratio of values; moreover, there are standardized effect sizes such as Cohen's d, which is the mean of the experimental group minus the mean of the control group divided by the standard deviation. Such metric is equivalent to the z-score of a normal distribution, that is, an effect size of 0.8 means that the score in the experimental group is 0.8 standard deviations above the control group. Cohen suggested that a value of d=0.2 could be interpreted as a small effect size (a real effect, just small), d=0.5 as a medium effect size, and d=0.8 as a large effect size. If the two means differ by less than 0.2 standard deviations (d<0.2), “the difference is trivial, even if it is statistically significant” [13]. I have also borrowed one simple example to explain this [7,8]. This is an example of an estimation between one sample mean and a reference value: The scores of some test by students nationwide was 516, and our group of students scored 534.78 with a sd of 93.385. The effect size would be d = 18.78 / 93.385 = 0.2. Reporting the results of this test would be something like this: A 95% confidence interval for our mean score goes from 517 to 552, while a 95% confidence interval for our effect size d goes from 0.015 to 0.386. More complex examples can be found in the above-mentioned references.
 
@@ -133,22 +132,39 @@ qsTable(qs.results.msig, number=10)
 plot(qs.results.msig)
 ```
 
+![A pathway from WikiPathways](/img/wikip.png)
+
+_A pathway from WikiPathways_
+
 This plot is a beautiful summary of all the discussion. The x-axis contains all the gene sets, while the y axis displays the effect size (pathway activation). Every value is accompanied by its confidence interval. On the other hand, the green/red and black colors show us if the gene set is significant or not. If we are using GSA to choose one pathway to study in more detail, now we have more conceptual tools to make a decision: We want significance but also high effect size and small confidence intervals. We can explore each pathway and discover cases where significance, effect size, and confidence interval are all good, but also cases of significant pathways that show no effect, or cases of good effect size with confidence intervals that are too large (going from up-effect to no-effect to down-effect), and multiple other ways of judging our results beyond a simple p-value rank.
 
 ### 6. Last words:
 "To p or not to p?"... The answer seems to be: "To p, to d, and to Ci". Hopefully, in the near future, more GSA and bioinformatics tools give us the chance to judge the results according to the significance approach, but also the estimation approach; for us, "Statistics users", such an approach constitutes both an unexpected challenge and an exciting "new" tool.
 
 ### References (Recommended readings):
-[1] ARMHEIN, V., et al. (2019), Retire statistical significance, Nature 567. 305-307, https://doi.org/10.1038/d41586-019-00857-9
-[2] How to correctly interpret p-values, https://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values, retrieved: 2020-05-05
+[1] ARMHEIN, V., et al. (2019), Retire statistical significance, Nature 567. 305-307, ([https://doi.org/10.1038/d41586-019-00857-9](https://doi.org/10.1038/d41586-019-00857-9))
+
+[2] How to correctly interpret p-values, ([https://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values](https://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values)), retrieved: 2020-05-05
+
 [3] HAAF, J.M., et al. (2019), Retire significance, but still test hypotheses, Nature 567, 461, https://doi.org/10.1038/d41586-019-00972-7
+
 [4] Confidence intervals, https://www.mathsisfun.com/data/confidence-interval.html, retrieved: 2020-05-05
+
 [5] Computing confidence intervals, http://www.cyclismo.org/tutorial/R/confidence.html, retrieved: 2020-05-05
+
 [6] Plot data with confidence intervals, https://stackoverflow.com/questions/14069629/how-can-i-plot-data-with-confidence-intervals, retrieved: 2020-05-05
+
 [7] Effect size, https://www.leeds.ac.uk/educol/documents/00002182.htm, retrieved: 2020-05-05
+
 [8] Effect size estimation, http://core.ecu.edu/psyc/wuenschk/StatHelp/Effect%20Size%20Estimation.pdf, retrieved: 2020-05-05
+
 [9] CUMMING, Geoff (2012), Understanding the new statistics: Effect sizes, confidence intervals, and meta-analysis, 1st edition, Routledge.
+
 [10] CUMMING, G. and CALIN-JAGEMAN, R. (2016), Introduction to the new statistics: Estimation, open science, and beyond, 1st edition, Routledge.
-[11] HARRISON P., et al. (2019), Topconfects: a package for confident effect sizes in differential expression analysis provides a more biologically useful ranked gene list, Genome Biology, https://doi.org/10.1186/s13059-019-1674-7
+
+[11] HARRISON P., et al. (2019), Topconfects: a package for confident effect sizes in differential expression analysis provides a more biologically useful ranked gene list, 
+Genome Biology, https://doi.org/10.1186/s13059-019-1674-7
+
 [12] YAARI et al. (2013), Quantitative set analysis for gene expression: a method to quantify gene set differential expression including gene-gene correlations, Nucleic Acids Research, https://doi.org/10.1093/nar/gkt660
+
 [13] Statistics for Psychology, Null hypothesis testing and effect sizes, https://people.bath.ac.uk/pssiw/stats2/page2/page14/page14.html, retrieved: 2020-05-05
