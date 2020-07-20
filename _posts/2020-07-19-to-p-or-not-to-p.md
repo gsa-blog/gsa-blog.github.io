@@ -36,119 +36,119 @@ Misunderstanding the meaning of the p-values is the source of their misuse, and 
 _A pathway from WikiPathways_
 
 ### 2. p all over the place:
-An ontology can be defined as a formal system for describing knowledge, which includes the terms in a certain field, their precise definition, and conceptual relationships among them (such as "is-a" or "part-of"). There are several biological ontologies, including the "Gene Ontology" (GO) (12), "Disease Ontology" (DO) (13), "Human Phenotype Ontology" (14), and many others, which can be discovered using ontology search services such as the "Ontology Lookup Service" (OLS) ([https://www.ebi.ac.uk/ols/index](https://www.ebi.ac.uk/ols/index)). When ontology terms are annotated with gene information, such as in GO, they become the most commonly used resource for GSA.
+The use of p-values has been questioned for a long time but, in recent years, it has been under a fiery attack. One of the most recent and influential papers was last year’s “Retire statistical significance” in Nature, signed by V. Amrhein and more than 800 other scientists [1]. However, this is just the tip of a long discussion. Just look at this list: “P values are only an index to evidence: 20th- vs. 21st-century statistical science” (Burnham and Anderson), “In defense of P values” (Murtaugh), “Understanding the new statistics: Effect sizes, confidence intervals, and meta-analysis” (Cumming), and all the books by Geoff Cumming (“Understanding the new statistics”, “Introduction to the new statistics”). Some of the papers display humorous titles such as “The earth is round (p < .05)” (Cohen) or, my favorite, “To P or not to P” (Barber and Ogle)... Nothing like a good statistical pun to make you “p” your pants…
 
-The Gene Ontology (GO) is a set of biological terms/concepts/classes that can be applied to genes, gene products or gene functions, as well as the relationships between these concepts. It is composed of: A dictionary (containing the definition of the terms involved in molecular and cell biology), an ontology (a formal system to describe the terms), and a map between genes and GO terms (GO annotation). GO terms are hierarchically organized, from more general terms to more specific terms. At the top of the hierarchy, there are three basic ontologies: biological process (pathways and larger processes), cellular component (localization of gene products), and molecular function. Each term in the GO tree may have multiple parents or multiple children, and each child is related to its parents by relationships such as "is-a", "part-of", "regulates", "occurs-in", or "capable-of". For example, "cellular process" (child) is-a "biological process" (parent). GO annotations are descriptions of the function and localization of specific gene products by creating links between gene names and GO terms. They can be created manually by curators or automatically. GO has a very detailed code for the different types of evidence recorded, ranging from EXP (inferred from experiment) to IC (inferred by curator) and IEA (inferred from electronic annotation). The detailed list of GO evidence codes can be found in their website ([www.geneontology.org/page/guide-go-evidence-codes](www.geneontology.org/page/guide-go-evidence-codes)).
+I will explain the central criticisms to the use of p-values (and the decisions based on significance alone) based on Amrhein’s paper: The authors’ main message is to keep p-values as one of the statistical tools in the toolbox, while they urge us to abandon the current idea of statistical significance as the single way to decide if a result supports or refutes a given hypothesis. Their article provides a very illustrative example: They mention two papers studying the same phenomenon; the first paper found significance and concluded that there was support to the effect under study, while the second paper found non-significance and declared that such result was inconsistent with the first one. Amrhein et al. highlight that both studies found exactly the same effect (a risk ratio of 1.2 or a 20% increase), and the difference was that the first one was more precise than the other, with a confidence interval between 9% and 33% (p=0.0003), while the second one had an interval between -3% to 48% (p=0.091). The authors state that the observed effect is the same in both studies, so they are not in conflict, but the terms “significant” and “non-significant” can make us think that they belong to different and contradictory categories (almost as “true” and “false”). Moreover, they react against the dangers of rejecting a non-significant study, because the second study showed many individuals with serious risk increases, a situation that can’t be ignored [1].
 
-![The Finger Ontology](/img/finger.PNG)
+Then how should we report our results? For the “new statistics” authors, discussing the effect size, the confidence interval, and the p-value, as a whole, is the way to go. For example: “The authors above could have written: ‘Like a previous study, our results suggest a 20% increase in risk on blah blah blah. Nonetheless, a risk difference ranging from a 3% decrease, a small negative association, to a 48% increase, a substantial positive association, is also reasonably compatible with our data, given our assumptions’. Interpreting the point estimate, while acknowledging its uncertainty, will keep you from making false declarations of ‘no difference’, and from making overconfident claims” [1]. They go even further with their recommendations: “Decisions to interpret or to publish results will not be based on statistical thresholds. People will spend less time with statistical software, and more time thinking” [1].
 
-_Ontologies 101_
+In words of Cumming, we are currently confronted with two different ways of statistical thinking. A “dichotomous thinking” which focuses on choosing between two mutually exclusive alternatives, and an “estimation thinking” that focuses on the values of the point and interval estimates [9]. Some authors argue that the dichotomous significance thinking should be abandoned, but there is still “value” in the p-value. “When done properly, hypothesis testing is an important precondition for estimating an effect size… Without the restraint provided by testing, an estimation-only approach will lead to overfitting of research results, poor predictions and overconfident claims” [3]. In fact, the same authors have highlighted that Fisher himself, in his 1928 book, introduced p-values just in the following way: “it is a useful preliminary before making a statistical estimate… to test if there is anything to justify estimation at all” [3].
 
-### Gene-set databases:
-A "gene set" is a simpler and more general concept. Any list of genes that can be grouped for any reason can be defined as a gene set. For example, a group of genes differentially expressed (DE) in a given disease. An annotated ontology (such as GO), the list of genes in a pathway, or a group of phenotypically-related genes, may be gene sets as well.
+### 3. All you need is size and confidence:
+The current situation is a good opportunity to go back to the Statistics books and review the notions of "confidence intervals" and "effect sizes".
 
-Some examples of gene set databases are "GeneSetDB" (15), "MSigDB" (16) and "PAGED" (17). GeneSetDB contains several pathway databases (including Reactome and Wikipathways), disease/phenotype databases, drug/chemical databases, gene regulation databases, and the GO. MSigDB contains a series of sub-collections, such as: Positional gene sets (gene set per human chromosome and cytogenetic band), curated gene sets (chemical and genetic perturbations, canonical pathways, Biocarta, KEGG, Reactome), motif gene sets (miRNA targets, TF targets), computational gene sets (cancer gene neighborhoods and modules), GO, oncogenic signatures, and immunologic signatures.
-
-### Functional Association Networks:
-Functional Association Networks (FAN) are networks that integrate different types of source data such as pathway, co-expression, genetic interaction, protein interaction, and others. The nodes in such networks represent genes or gene products, while the edges represent the probability or degree of belief that those genes are functionally related. Some examples are: FunCoup (18) and GeneMania (19). FANs are mainly used as a reference dataset for a new class of gene set analysis methods (including NEA, EnrichNet, CrossTalkZ, NetPEA, and BinoX) that relies on network interaction.
-
-### Unstructured sources of knowledge:
-Biomedical literature may contain more pathway information than any existing biological database. However, reading the literature is a task that would take humans a prohibitive amount of time. Therefore, we need methodologies to automatically extract gene-set knowledge from the literature. "Text mining" tools have been developed for many years (20) and they are out of the scope of this review, but it would be interesting to discuss at least one example. MELODI ([http://www.melodi.biocompute.org.uk/](http://www.melodi.biocompute.org.uk/)) is a text mining tool that extracts mechanisms of disease based on subject-predicate-object triples from SemMedDB (Semantic Medline Database) (21). Using a database of triples for the biomedical literature, MELODI is able to link information from different papers and reconstruct the pathways for us. The text mining approach (MELODI+MedSemDB) is less taken into account nowadays, but the growth of the literature and the improvement of the text mining tools may lead us to consider it as another important source of gene set annotation.
-
-### R databases:
-Several of the above-mentioned pathway, ontology, and gene-set databases do exist as R packages, making it easier to integrate with the different R GSA methods. Examples of R databases are KEGGREST, reactome.db, and others.
-
-KEGGREST allows access to the KEGG REST API. Some basic commands:
+A confidence interval is a range of values that we can confidently assume our true value lies in. Here is a simple example from mathisfun.com: You measure the height of 40 randomly chosen men and the result is a mean height of 175 cm with a standard deviation of 20 cm. Those are the sample mean and sd. When you compute the confidence interval, you will get a result like this: "The 95% confidence interval is 175 cm +- 6.2 cm". That means that the true mean height is not exactly 175 cm but something between 168.8 cm and 181.2 cm. Even worst, it means that there is still a 5% chance that such interval does not include the true mean height [4]. A confidence interval is a tough reality check that reminds us to see our results in a more uncertain and probabilistic way. The following is an example of an R code to compute confidence intervals [5]:
 ```R
-library(KEGGREST)
-query <- keggGet("hsa:10458")
-query[[1]]
-query[[1]]$DEFINITION
-query[[1]]$PATHWAY
-
-query2<- keggGet("hsa05130")
-query2[[1]]
-query2[[1]]$NAME
-query2[[1]]$GENE
-
-query3 <- keggGet("hsa05130", "image")
-library(png)
-writePNG(query3, "imagepath.png")
+mean = 5
+sd = 2
+n = 20
+error = qnorm(0.975)*sd/sqrt(n)
+left = mean - error
+right = mean + error
+cat ("\n", "We are 95% certain in predicting that the true mean is in the interval [", left, "-", right, "], assuming that the original random variable is normally distributed and the samples are independent.", "\n")
 ```
 
-reactome.db is an R dataset with Reactome information. Some basic commands:
+And here is a simple way to plot confidence intervals using ggplot [6]:
 ```R
-library(reactome.db)
-xx <- as.list(reactomeEXTID2PATHID)
-xx['100']
-
-yy <- as.list(reactomePATHID2EXTID)
-yy['R-HSA-114608']
-
-zz <- as.list(reactomePATHID2NAME)
-zz['R-HSA-114608']
+set.seed(1234)
+df = data.frame(x = 1:10, mean=runif(10,1,2), lower=runif(10,0,1), upper=runif(10,2,3))
+require(ggplot2)
+ggplot(df, aes(x=x, y=mean)) + geom_point(size=4) + geom_errorbar(aes(ymax=upper, ymin=lower))
 ```
 
-GeneSetDB can be found in the Bioconductor package EGSEAdata. Some basic commands:
+An effect size is an alternative to statistical significance tests to quantify the differences between two groups. Effect sizes can be quantitative values of measured phenomena, or even a ratio of values; moreover, there are standardized effect sizes such as Cohen's d, which is the mean of the experimental group minus the mean of the control group divided by the standard deviation. Such metric is equivalent to the z-score of a normal distribution, that is, an effect size of 0.8 means that the score in the experimental group is 0.8 standard deviations above the control group. Cohen suggested that a value of d=0.2 could be interpreted as a small effect size (a real effect, just small), d=0.5 as a medium effect size, and d=0.8 as a large effect size. If the two means differ by less than 0.2 standard deviations (d<0.2), “the difference is trivial, even if it is statistically significant” [13]. I have also borrowed one simple example to explain this [7,8]. This is an example of an estimation between one sample mean and a reference value: The scores of some test by students nationwide was 516, and our group of students scored 534.78 with a sd of 93.385. The effect size would be d = 18.78 / 93.385 = 0.2. Reporting the results of this test would be something like this: A 95% confidence interval for our mean score goes from 517 to 552, while a 95% confidence interval for our effect size d goes from 0.015 to 0.386. More complex examples can be found in the above-mentioned references.
+
+Writing this post, I have discovered a few books that teach statistics from this point of view (and also found out that they have been out there for a few years already). I didn't have the luck to learn Statistics using such books but they are now in my to-read list [9,10]. Cumming's "Understanding the new statistics" succintly expresses the mindset change: "Dichotomous thinking focuses on making a choice between two mutually exclusive alternatives. The dichotomous reject-or-don't-reject decisions of NHST (null hypothesis significance testing) tend to elicit dichotomous thinking" while "Estimation thinking focuses on 'how much', by focusing on point and interval estimates" [9]. Estimation thinking also opens a door to meta-analytic thinking. Confidence intervals can be large for a single study but, combining evidence from multiple studies, we can get not only a better estimate but also a shorter (more precise) confidence interval. Therefore, meta-analytic thinking (and the use of meta-analysis tools such as forest plots) can be seen as an extension of estimation thinking that considers our results as one piece of information in the context of all past and future results.
+
+
+### 4. Gene expression and estimation thinking:
+When talking about gene expression studies, the most common way of quantifying differences between groups is the fold-change (or, even better, the log-fold-change). In order to get a standardized effect size we could just divide the log-fold-change by the standard deviation of the log-fold-change.
+
+I have searched for methods that use effect sizes and confidence intervals in differential expression analysis, and I will make emphasis in one called "Topconfects" [11]. Harrison et al. start from the same place we are now: Justifying a "shift of emphasis from a dichotomous division between zero and non-zero effect size to estimating the effect size and placing confidence bounds on this estimate" [11]. The authors question the way in which we choose the resulting genes from an experiment: Most authors order the differential expression analysis results in order of p-values or false discovery rate and choose the genes above a certain cutoff value; however, we have seen that statistical significance is not the same as a biologically meaningful effect size. A first  alternative could be selecting genes using a reasonable significance threshold and then ranking them (and/or further filtering) according to the log-fold-change; a second alternative would be selecting genes according to a log-fold-change threshold and then ranking according to the p-value. The authors suggest an alternative called a "confident effect size" or "confect", which is a development of limma's TREAT method. TREAT tests if the differential expression is greater than a given threshold (not just different from zero). Topconfects asks for a FDR and tries a range of fold changes to compute a "confect", which is "the fold change cutoff required for TREAT to produce that set of genes at the given FDR". Genes are then ranked by such "confident effect sizes", and we can also obtain the confidence intervals of the fold changes. The bioconductor package also includes a series of functions called "limma_confects", "edger_confects", and "deseq2_confects", which can be used to rank by confects as a final step in a limma, edgeR, or DESeq2 analysis.
+
+Ordering the results of the differential expression analysis according to p-value and according to confect for a breast cancer dataset shows some coincidences and some differences between their gene rankings, which get more accentuated after performing GO enrichment analysis of the top genes (see paper). For the time being, I don't have much to say about this idea, but it's worth to keep an eye on it.
+
+### 5. Gene Set Analysis and estimation thinking:
+Which finally takes us to our main subject of interest. How is Gene Set Analysis making use of this way of thinking?
+
+Here I will describe one GSA method that is using the estimation approach. It is called QuSAGE [12]. The authors highlight that existing GSA methods can't produce confidence intervals, so they build a probability density function (pdf) of gene-set/pathway activities from which both p-values and confidence intervals can be extracted. (i) They compute the pdf of log(activities) for each gene in the treatment and control samples, and then compute the differential expression pdf for such gene; (ii) gene-set pdfs are built by combining the pdfs of the genes in the gene-set; (iii) such gene-set pdfs are then corrected by gene-gene correlation; (iv) statistical significance and confidence intervals of the gene-set activity are finally computed. After that, the authors introduce a visualization plot that includes all type of information recommended by the authors previously dicussed: Induced and repressed pathways, pathways with higher and smaller effect size, size of the confidence intervals, and the p-values, instead of the significant/non-significant dichotomy.
+
+So let's finish this discussion plotting a beautiful QuSAGE diagram. Let's start by installing the R package:
 ```R
-library(EGSEAdata)
-egsea.data()
-gsetdb.human[[3]]
+if (!requireNamespace("BiocManager", quietly=TRUE))
+	install.packages("BiocManager")
+BiocManager::install("qusage")
 ```
 
-MSigDB can be found in multiple R packages. However, RData files can be downloaded from here: [http://bioinf.wehi.edu.au/software/MSigDB/](http://bioinf.wehi.edu.au/software/MSigDB/) Among them, the “c2” dataset is one of the most used.
+Then, let's follow the example on qusage's vignette. We start with the setup:
 
-Two Bioconductor packages with ontology data (but not the gene annotation) are GO.db and DO.db. GO.db is a Bioconductor annotation package with Gene Ontology information.  For example:
 ```R
-library(GO.db)
-xx <- as.list(GOTERM)
-xx[['GO:0000001']]
+library(qusage)
+library(nlme)
+data("fluExample")
+data("GeneSets")
+
+i = c(which(flu.meta$Hours==0), which(flu.meta$Hours==77))
+eset = eset.full[,i]
+resp = flu.meta$Condition[i]
+dim(eset)
+# eset[1:5,1:5]
 ```
 
-DO.db is a Bioconductor annotation package with Disease Ontology information.  For example:
+After that, we can go with a simple case:
+
 ```R
-library(DO.db)
-DOTERM[['DOID:0014667']]
+labels = c(rep("t0",17), rep("t1",17))
+labels
+
+contrast = "t1-t0"
+
+# MSIG.geneSets = read.gmt("c2.cp.kegg.v4.0.symbols.gmt")
+summary(MSIG.geneSets[1:5])
+MSIG.geneSets[2]
+
+qs.results.msig = qusage(eset, labels, contrast, MSIG.geneSets)
+numPathways(qs.results.msig)
 ```
 
-However, in order to get the GO annotation, you would need a package like biomaRt:
+With the previous results, we can proceed to get the pathways with their log-fold-change, p-value, FDR, and a plot including all these information plus confidence intervals:
+
 ```R
-library(biomaRt)
-ensembl = useMart("ensembl", dataset="hsapiens_gene_ensembl")
-genes <- getBM (attributes = c('hgnc_symbol', 'ensembl_transcript_id', 'go_id'), filters = 'go', values = 'GO:0000002', mart = ensembl)
+p.vals = pdf.pVal(qs.results.msig)
+head(p.vals)
+q.vals = p.adjust(p.vals, method="fdr")
+head(q.vals)
+qsTable(qs.results.msig, number=10)
+
+plot(qs.results.msig)
 ```
 
-### Adding your own gene sets:
-Finally, if you have your own gene sets, you may build R gene set objects with them and share them with the scientific community. Building an RData object would be enough, but it would be even better if you can store them in the same format used by the previous databases, which can be recognized by some GSA tools. In addition, tools for building gene sets have also been developed; see, for example, GSEABase ([http://bioconductor.org/packages/release/bioc/vignettes/GSEABase/inst/doc/GSEABase.pdf](http://bioconductor.org/packages/release/bioc/vignettes/GSEABase/inst/doc/GSEABase.pdf)).
+This plot is a beautiful summary of all the discussion. The x-axis contains all the gene sets, while the y axis displays the effect size (pathway activation). Every value is accompanied by its confidence interval. On the other hand, the green/red and black colors show us if the gene set is significant or not. If we are using GSA to choose one pathway to study in more detail, now we have more conceptual tools to make a decision: We want significance but also high effect size and small confidence intervals. We can explore each pathway and discover cases where significance, effect size, and confidence interval are all good, but also cases of significant pathways that show no effect, or cases of good effect size with confidence intervals that are too large (going from up-effect to no-effect to down-effect), and multiple other ways of judging our results beyond a simple p-value rank.
 
-### Discussion and thoughts:
-As I said in the beginning, sometimes you may want to go beyond the databases offered by the GSA tool that you are using. Choosing a new database resource depends on which kind of information are you looking for (specific pathways? functions in the “Biological Process” Gene Ontology? specific disease association? all of them?). In general, we must keep in mind that pathways contain structural information than gene sets lack, and gene sets contain much more information than just pathways. In addition, in pathways, some genes can be up-regulated and some down-regulated at a given time, while gene sets may change in a coordinated fashion (either all genes up-regulated or down-regulated in a given disease, for example). It has been already discussed that some methodologies were designed to detect coordinated changes, and therefore researchers should be aware of that when choosing a pair of a GSA method and an annotated database (22). In general, over-representation analysis (ORA) and functional class scoring (FCS) methods work with gene set databases (including pathways), pathway databases are necessary for pathway topology based (PT) methods, while FANs are necessary for network interaction (NI) methods.
+### 6. Last words:
+"To p or not to p?"... The answer seems to be: "To p, to d, and to Ci". Hopefully, in the near future, more GSA and bioinformatics tools give us the chance to judge the results according to the significance approach, but also the estimation approach; for us, "Statistics users", such an approach constitutes both an unexpected challenge and an exciting "new" tool.
 
-In any case, it is always important to take into account the trustworthiness and number of gene sets in the database, if they are open or proprietary, and how well they link to advanced GSA and visualization software. For that reason, even though "Pathguide" (23) lists "702 biological pathway related resources and molecular interaction related resources" ([http://www.pathguide.org](http://www.pathguide.org)), the truth is that just a few resources are frequently used. 
-
-Current databases are highly incomplete and, therefore, before thinking about more sophisticated GSA analytical methods, it is wise to pay attention to having the right type of gene sets, in a good amount/coverage, and with a good quality. It has been said (in the context of machine learning) that “More data beats clever algorithms” and “Better data beats more data” ([https://www.azquotes.com/quote/1020712](https://www.azquotes.com/quote/1020712)). In the functional interpretation of biomedical data, we could also claim that no GSA method will give us the biological insights we are looking for if we don’t pay enough attention to the amount and the quality of the information contained in the annotation databases that we are using.
-
-### References
-1.	Ogata H, Goto S, Sato K, Fujibuchi W, Bono H, Kanehisa M. KEGG: Kyoto Encyclopedia of Genes and Genomes. Nucleic Acids Res. 1999;27(1):29-34.
-2.	Fabregat A, Jupe S, Matthews L, Sidiropoulos K, Gillespie M, Garapati P, et al. The Reactome Pathway Knowledgebase. Nucleic Acids Res. 2017.
-3.	Pico AR, Kelder T, van Iersel MP, Hanspers K, Conklin BR, Evelo C. WikiPathways: pathway editing for the people. PLoS Biol. 2008;6(7):e184.
-4.	Cerami EG, Gross BE, Demir E, Rodchenkov I, Babur O, Anwar N, et al. Pathway Commons, a web resource for biological pathway data. Nucleic Acids Res. 2011;39(Database issue):D685-90.
-5.	Soh D, Dong D, Guo Y, Wong L. Consistency, comprehensiveness, and compatibility of pathway databases. BMC Bioinformatics. 2010;11:449.
-6.	Stobbe MD, Houten SM, Jansen GA, van Kampen AH, Moerland PD. Critical assessment of human metabolic pathway databases: a stepping stone for future integration. BMC Syst Biol. 2011;5:165.
-7.	Altman T, Travers M, Kothari A, Caspi R, Karp PD. A systematic comparison of the MetaCyc and KEGG pathway databases. BMC Bioinformatics. 2013;14:112.
-8.	Sales G, Calura E, Cavalieri D, Romualdi C. graphite - a Bioconductor package to convert pathway topology to gene network. BMC Bioinformatics. 2012;13:20.
-9.	Bauer-Mehren A, Furlong LI, Sanz F. Pathway databases and tools for their exploitation: benefits, current limitations and challenges. Mol Syst Biol. 2009;5:290.
-10.	Wittig U, De Beuckelaer A. Analysis and comparison of metabolic pathway databases. Brief Bioinform. 2001;2(2):126-42.
-11.	Chowdhury S, Sarkar RR. Comparison of human cell signaling pathway databases--evolution, drawbacks and challenges. Database (Oxford). 2015;2015.
-12.	Ashburner M, Ball CA, Blake JA, Botstein D, Butler H, Cherry JM, et al. Gene ontology: tool for the unification of biology. The Gene Ontology Consortium. Nat Genet. 2000;25(1):25-9.
-13.	Schriml LM, Arze C, Nadendla S, Chang YW, Mazaitis M, Felix V, et al. Disease Ontology: a backbone for disease semantic integration. Nucleic Acids Res. 2012;40(Database issue):D940-6.
-14.	Groza T, Kohler S, Moldenhauer D, Vasilevsky N, Baynam G, Zemojtel T, et al. The Human Phenotype Ontology: Semantic Unification of Common and Rare Disease. Am J Hum Genet. 2015;97(1):111-24.
-15.	Araki H, Knapp C, Tsai P, Print C. GeneSetDB: A comprehensive meta-database, statistical and visualisation framework for gene set analysis. FEBS Open Bio. 2012;2:76-82.
-16.	Liberzon A, Subramanian A, Pinchback R, Thorvaldsdottir H, Tamayo P, Mesirov JP. Molecular signatures database (MSigDB) 3.0. Bioinformatics. 2011;27(12):1739-40.
-17.	Huang H, Wu X, Sonachalam M, Mandape SN, Pandey R, MacDorman KF, et al. PAGED: a pathway and gene-set enrichment database to enable molecular phenotype discoveries. BMC Bioinformatics. 2012;13 Suppl 15:S2.
-18.	Alexeyenko A, Sonnhammer EL. Global networks of functional coupling in eukaryotes from comprehensive data integration. Genome Res. 2009;19(6):1107-16.
-19.	Mostafavi S, Ray D, Warde-Farley D, Grouios C, Morris Q. GeneMANIA: a real-time multiple association network integration algorithm for predicting gene function. Genome Biol. 2008;9 Suppl 1:S4.
-20.	Raychaudhuri S, Schutze H, Altman RB. Using text analysis to identify functionally coherent gene groups. Genome Res. 2002;12(10):1582-90.
-21.	Kilicoglu H, Shin D, Fiszman M, Rosemblat G, Rindflesch TC. SemMedDB: a PubMed-scale repository of biomedical semantic predications. Bioinformatics. 2012;28(23):3158-60.
-22.	Tarca AL, Bhatti G, Romero R. A comparison of gene set analysis methods in terms of sensitivity, prioritization and specificity. PLoS One. 2013;8(11):e79217.
-23.	Bader GD, Cary MP, Sander C. Pathguide: a pathway resource list. Nucleic Acids Res. 2006;34(Database issue):D504-6.
+### References (Recommended readings):
+[1] ARMHEIN, V., et al. (2019), Retire statistical significance, Nature 567. 305-307, https://doi.org/10.1038/d41586-019-00857-9
+[2] How to correctly interpret p-values, https://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values, retrieved: 2020-05-05
+[3] HAAF, J.M., et al. (2019), Retire significance, but still test hypotheses, Nature 567, 461, https://doi.org/10.1038/d41586-019-00972-7
+[4] Confidence intervals, https://www.mathsisfun.com/data/confidence-interval.html, retrieved: 2020-05-05
+[5] Computing confidence intervals, http://www.cyclismo.org/tutorial/R/confidence.html, retrieved: 2020-05-05
+[6] Plot data with confidence intervals, https://stackoverflow.com/questions/14069629/how-can-i-plot-data-with-confidence-intervals, retrieved: 2020-05-05
+[7] Effect size, https://www.leeds.ac.uk/educol/documents/00002182.htm, retrieved: 2020-05-05
+[8] Effect size estimation, http://core.ecu.edu/psyc/wuenschk/StatHelp/Effect%20Size%20Estimation.pdf, retrieved: 2020-05-05
+[9] CUMMING, Geoff (2012), Understanding the new statistics: Effect sizes, confidence intervals, and meta-analysis, 1st edition, Routledge.
+[10] CUMMING, G. and CALIN-JAGEMAN, R. (2016), Introduction to the new statistics: Estimation, open science, and beyond, 1st edition, Routledge.
+[11] HARRISON P., et al. (2019), Topconfects: a package for confident effect sizes in differential expression analysis provides a more biologically useful ranked gene list, Genome Biology, https://doi.org/10.1186/s13059-019-1674-7
+[12] YAARI et al. (2013), Quantitative set analysis for gene expression: a method to quantify gene set differential expression including gene-gene correlations, Nucleic Acids Research, https://doi.org/10.1093/nar/gkt660
+[13] Statistics for Psychology, Null hypothesis testing and effect sizes, https://people.bath.ac.uk/pssiw/stats2/page2/page14/page14.html, retrieved: 2020-05-05
