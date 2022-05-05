@@ -14,7 +14,7 @@ tags:
   - shiny
 ---
 
-### Announcement:
+## Announcement:
 ![GSA Classroom logo](/img/gsa-classroom-200x200.png)
 
 We are pleased to announce the introduction of **GSA Classroom**, a repository of slides, videos, and animations, to learn Gene Set Analysis:
@@ -23,7 +23,7 @@ We are pleased to announce the introduction of **GSA Classroom**, a repository o
 
 **GSA Classroom** contains links to entire online courses, including our own animated course. In addition, it has a database with freely available online videos and their meta-data, including english and chinese videos, academic and commercial software, and more.
 
-### Screenshots:
+## Screenshots:
 
 ![GSA Classroom screenshot](/img/gsaclass-screenshot1.PNG)
 
@@ -33,9 +33,8 @@ _Fig 1. GSA Classroom screenshot 1_
 
 _Fig 2. GSA Classroom screenshot 2_
 
-### Update:
-### References:
+## Update:
+## References:
 **GSA Classroom** has been introduced in the following publication:
 
 [1] HUANG, X., (2022), Placeholder, Journal of placeholders, 1, 1, [https://doi.org/10.1093/bib/bbz090](https://doi.org/10.1093/bib/bbz090)
-
