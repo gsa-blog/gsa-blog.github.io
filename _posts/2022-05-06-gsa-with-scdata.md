@@ -80,7 +80,7 @@ barplot(sort(-log10(p.adj), decreasing=TRUE), ylim=c(0, 100), las=2)
 abline(h = -log10(0.05), col="red")
 ```
 
-![](/home/zihong/Documents/GSA/plot_zoom_png2.png)
+![](https://github.com/gsa-blog/gsa-blog.github.io/raw/master/img/gsa_scdata1.png)
 
 *Fig. Differential expression analysis results for genes. Barplot shows -log10(p-value) for each gene. Red line shows the p = 0.05 significant threshold. Only few genes passes the significant threshold among all 7484 genes*
 
@@ -114,7 +114,7 @@ for(i in seq_along(gseaSig)) {
 }
 ```
 
-![](/home/zihong/Documents/GSA/plot_zoom_png3.png)
+![](https://github.com/gsa-blog/gsa-blog.github.io/raw/master/img/gsa_scdata2.png)
 
 *Fig. Gene set enrichment plot for gene set GO:0000184 demonstrates significant enrichment of our single-cell RNA data*
 
@@ -182,7 +182,7 @@ pathways <- markers %>% group_by(cluster) %>% top_n(n=5,wt=avg_log2FC)
 DoHeatmap(se_oj,features=pathways$gene)
 ```
 
-![](/home/zihong/Documents/GSA/plot_zoom_png.png)
+![](https://github.com/gsa-blog/gsa-blog.github.io/raw/master/img/gsa_scdata3.png)
 
 *Fig. Heatmap of cell-type specific pathways*
 
@@ -198,9 +198,9 @@ DoHeatmap(se_oj,features=pathways$gene)
 
 (http://sctpa.bio-data.cn/sctpa/)
 
-Also, the author of testSctpa provides with a web platform for analysis without coding. However, it cannot process files more than 150 MB.
+Also, the author of testSctpa provides with a web platform for analysis without coding. However, **it cannot process files more than 150 MB**.
 
-![](/home/zihong/Pictures/Screenshot from 2022-04-29 16-11-03.png)
+![](https://github.com/gsa-blog/gsa-blog.github.io/raw/master/img/gsa_scdata4.png)
 
 
 
@@ -208,9 +208,9 @@ Here, we can try Example 1 from the website with all default setting (KEGG pathw
 
 After running the job, we can download tables or plots of different information. (pathway activity score, cell-type-specific activation pathways, heatmap, PCA reduction, etc.)
 
-![](/home/zihong/Pictures/Screenshot from 2022-04-29 16-14-29.png)
+![](https://github.com/gsa-blog/gsa-blog.github.io/raw/master/img/gsa_scdata5.png)
 
-![](/home/zihong/Pictures/Screenshot from 2022-04-29 16-15-19.png)
+![](https://github.com/gsa-blog/gsa-blog.github.io/raw/master/img/gsa_scdata6.png)
 
 
 
@@ -271,7 +271,7 @@ viewResults(vis)
 
 Then, a browser will be launched for the interactive report.
 
-![](/home/zihong/Pictures/Screenshot from 2022-04-29 19-15-12.png)
+![](https://github.com/gsa-blog/gsa-blog.github.io/raw/master/img/gsa_scdata7.png)
 
 *Fig.  Web report of VISION (Signature scores are computed using the expression matrix)*
 
