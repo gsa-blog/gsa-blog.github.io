@@ -24,15 +24,20 @@ We are pleased to announce the introduction of **GSA-BenchmarKING**, a repositor
 
 ## Screenshots:
 
-![GSABenchmarKING screenshot](/img/gsabenchmark-screenshot1.PNG)
+![GSABenchmarKING screenshot](/img/gsabench-fig1.PNG)
 
-_Fig 1. GSABenchmarKING screenshot 1_
+_Fig 1. A jupyter notebook with a workflow for benchmarking single-sample GSA tools._
 
-![GSABenchmarKING screenshot](/img/gsabenchmark-screenshot2.PNG)
+![GSABenchmarKING screenshot](/img/gsabench-fig2.PNG)
 
-_Fig 2. GSABenchmarKING screenshot 2_
+_Fig 2. A shiny app for benchmarking single-sample GSA tools (dataset preview tab)._
+
+![GSABenchmarKING screenshot](/img/gsabench-fig3.PNG)
+
+_Fig 3. A shiny app for benchmarking single-sample GSA tools (results tab)._
 
 ## References:
 **GSA-BenchmarKING** has been introduced in the following publication:
 
-[1] XIE, C., et al. (2021), Popularity and performance of bioinformatics software: the case of gene set analysis, BMC Bioinformatics 22, 191, [https://doi.org/10.1186/s12859-021-04124-5](https://doi.org/10.1186/s12859-021-04124-5)
+[1] XIE, C., et al. (2021), Popularity and performance of bioinformatics software: the case of gene set analysis, _BMC Bioinformatics_ 22, 191, [https://doi.org/10.1186/s12859-021-04124-5](https://doi.org/10.1186/s12859-021-04124-5)
+

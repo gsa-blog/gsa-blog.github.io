@@ -36,16 +36,21 @@ We are pleased to announce the introduction of **Galaxy-GSA**, a group of GSA to
 
 ## Screenshots:
 
-![Galaxy-GSA screenshot](/img/galaxygsa-screenshot1.PNG)
+![Galaxy-GSA screenshot](/img/galaxygsa-fig1.PNG)
 
-_Fig 1. Galaxy-GSA screenshot 1_
+_Fig 1. Galaxy-GSA user interface (example: Reactome Pathway Analysis tool) --Data input._
 
-![Galaxy-GSA screenshot](/img/galaxygsa-screenshot2.PNG)
+![Galaxy-GSA screenshot](/img/galaxygsa-fig2.PNG)
 
-_Fig 2. Galaxy-GSA screenshot 2_
+_Fig 2. Galaxy-GSA user interface (example: Reactome Pathway Analysis tool) --Results._
+
+![Galaxy-GSA screenshot](/img/galaxygsa-fig3.PNG)
+
+_Fig 3. Galaxy-GSA virtual machine (zenodo page)._
 
 ## Update:
 ## References:
 **Galaxy-GSA** has been introduced in the following publication:
 
-[1] HUANG, X., (2022), Placeholder, Journal of placeholders, 1, 1, [https://doi.org/10.1093/bib/bbz090](https://doi.org/10.1093/bib/bbz090)
+[1] HUANG, X., (2022), Placeholder, _Journal of placeholders_, 1, 1, [https://doi.org/10.1093/bib/bbz090](https://doi.org/10.1093/bib/bbz090)
+

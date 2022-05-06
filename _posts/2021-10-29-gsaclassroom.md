@@ -25,16 +25,17 @@ We are pleased to announce the introduction of **GSA Classroom**, a repository o
 
 ## Screenshots:
 
-![GSA Classroom screenshot](/img/gsaclass-screenshot1.PNG)
+![GSA Classroom screenshot](/img/gsaclass-fig1.PNG)
 
-_Fig 1. GSA Classroom screenshot 1_
+_Fig 1. GSA Classroom screenshot (example of an online course)._
 
-![GSA Classroom screenshot](/img/gsaclass-screenshot2.PNG)
+![GSA Classroom screenshot](/img/gsaclass-fig2.PNG)
 
-_Fig 2. GSA Classroom screenshot 2_
+_Fig 2. GSA Classroom screenshot (shiny database of online videos)._
 
 ## Update:
 ## References:
 **GSA Classroom** has been introduced in the following publication:
 
-[1] HUANG, X., (2022), Placeholder, Journal of placeholders, 1, 1, [https://doi.org/10.1093/bib/bbz090](https://doi.org/10.1093/bib/bbz090)
+[1] HUANG, X., (2022), Placeholder, _Journal of placeholders_, 1, 1, [https://doi.org/10.1093/bib/bbz090](https://doi.org/10.1093/bib/bbz090)
+
