@@ -11,13 +11,11 @@ tags:
   - R
 ---
 
+Gene set or pathway enrichment analysis is a computational approach that determines whether a priori defined gene sets such as a pathway show statistical significance between two biological states. It is powerful when our single-cell RNA-seq data does not have obvious meaningful high-level expressed genes or a statistically significant difference between two biological states.
+
 Single-cell RNA-seq data, which always has high levels of technical noise and intrinsic biological stochasticity, sometimes may not be suitable for previous differential expression analysis approaches developed for bulk RNA-seq data. 
 
-Gene set or pathway enrichment analysis is a computational approach that determines whether an prior defined gene sets such as a pathway shows statistically significant of a dataset or between two biological states. It is powerful when our single-cell RNA-seq data does not have obvious meaningful high-level expressed genes or a statistically significant difference between two biological states.
-
-Here, we briefly introduce some tools for GSA analysis with scRNA-seq data using R or web platform.
-
-
+Here, we briefly introduce some tools for GSA analysis with scRNA-seq data using R or web platforms.
 
 ## 1. Liger
 
@@ -26,8 +24,6 @@ This R package is for bulk RNA gene set enrichment analysis, but we can apply it
 Here is an example using processed sub-sample data *(min.cells = 50, 1000 cells from donor patients and 1000 cells from IPF patients, **macrophage only**)* from GEO (GSE122960).
 
 Data download: https://zenodo.org/record/6523552/files/sample.rds?download=1
-
-
 
 ##### 1. Installation
 
@@ -84,8 +80,6 @@ abline(h = -log10(0.05), col="red")
 
 *Fig. Differential expression analysis results for genes. Barplot shows -log10(p-value) for each gene. Red line shows the p = 0.05 significant threshold. Only few genes passes the significant threshold among all 7484 genes*
 
-
-
 ##### 5. Run interative bulk GSEA on 100 gene sets as test
 
 ```R
@@ -118,12 +112,6 @@ for(i in seq_along(gseaSig)) {
 
 *Fig. Gene set enrichment plot for gene set GO:0000184 demonstrates significant enrichment of our single-cell RNA data*
 
-
-
-
-
-
-
 ## 2. testSctpa
 
 This R package provide six portable interfaces (*"AUCell", "Vision", "GSVA", "ssGSEA", "plage", "zscore"*) for PAS (*Pathway activity score*) calculation tools and abundant pathway databases in human and mouse.
@@ -131,8 +119,6 @@ This R package provide six portable interfaces (*"AUCell", "Vision", "GSVA", "ss
 Here is an example using the processed sub-sample data from GEO (GSE122960).
 
 Download link: https://zenodo.org/record/6497091/files/GSE122960.rds?download=1
-
-
 
 ##### 1. Installation
 
@@ -186,14 +172,6 @@ DoHeatmap(se_oj,features=pathways$gene)
 
 *Fig. Heatmap of cell-type specific pathways*
 
-
-
-
-
-
-
-
-
 ## 3. scTPA
 
 (http://sctpa.bio-data.cn/sctpa/)
@@ -201,8 +179,6 @@ DoHeatmap(se_oj,features=pathways$gene)
 Also, the author of testSctpa provides with a web platform for analysis without coding. However, **it cannot process files more than 150 MB**.
 
 ![](https://github.com/gsa-blog/gsa-blog.github.io/raw/master/img/gsa_scdata4.png)
-
-
 
 Here, we can try Example 1 from the website with all default setting (KEGG pathway). 
 
@@ -212,11 +188,7 @@ After running the job, we can download tables or plots of different information.
 
 ![](https://github.com/gsa-blog/gsa-blog.github.io/raw/master/img/gsa_scdata6.png)
 
-
-
 ​                     
-
-
 
 ## 4. VISION
 
@@ -275,19 +247,14 @@ Then, a browser will be launched for the interactive report.
 
 *Fig.  Web report of VISION (Signature scores are computed using the expression matrix)*
 
-
-
-
-
-
-
-## Reference
+## References
 
 [1] Fan J. (2019) Differential Pathway Analysis. In: Yuan GC. (eds)  Computational Methods for Single-Cell Data Analysis. Methods in  Molecular Biology, vol 1935. Humana Press, New York, NY.
 
 [2] testSctpa. https://github.com/zgyaru/testSctpa.
 
 [3] Zhang Y, Zhang Y, Hu J, Zhang J, Guo F, Zhou M, Zhang G, Yu F, Su J. scTPA: A web tool for single-cell transcriptome analysis of pathway activation signatures. Bioinformatics. 2020.                            
+
 [4] Zhang Y, Ma Y, Huang Y, Zhang Y, Jiang Q,  Zhou M, Su J. Benchmarking algorithms for pathway activity transformation of  single-cell RNA-seq data. Computational and Structural Biotechnology  Journal (Accepted).
 
 [5] DeTomaso, D., Jones, M.G., Subramaniam, M. et al. Functional interpretation of single cell similarity maps. Nat Commun 10, 4376 (2019).
