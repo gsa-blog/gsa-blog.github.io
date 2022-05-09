@@ -78,7 +78,7 @@ abline(h = -log10(0.05), col="red")
 
 ![](https://github.com/gsa-blog/gsa-blog.github.io/raw/master/img/gsa_scdata1.png)
 
-*Fig. Differential expression analysis results for genes. Barplot shows -log10(p-value) for each gene. Red line shows the p = 0.05 significant threshold. Only few genes passes the significant threshold among all 7484 genes*
+*Fig 1. Differential expression analysis results for genes. Barplot shows -log10(p-value) for each gene. Red line shows the p = 0.05 significant threshold. Only few genes passes the significant threshold among all 7484 genes*
 
 ##### 5. Run interative bulk GSEA on 100 gene sets as test
 
@@ -110,7 +110,7 @@ for(i in seq_along(gseaSig)) {
 
 ![](https://github.com/gsa-blog/gsa-blog.github.io/raw/master/img/gsa_scdata2.png)
 
-*Fig. Gene set enrichment plot for gene set GO:0000184 demonstrates significant enrichment of our single-cell RNA data*
+*Fig 2. Gene set enrichment plot for gene set GO:0000184 demonstrates significant enrichment of our single-cell RNA data*
 
 ## 2. testSctpa
 
@@ -170,7 +170,7 @@ DoHeatmap(se_oj,features=pathways$gene)
 
 ![](https://github.com/gsa-blog/gsa-blog.github.io/raw/master/img/gsa_scdata3.png)
 
-*Fig. Heatmap of cell-type specific pathways*
+*Fig 3. Heatmap of cell-type specific pathways*
 
 ## 3. scTPA
 
@@ -245,7 +245,7 @@ Then, a browser will be launched for the interactive report.
 
 ![](https://github.com/gsa-blog/gsa-blog.github.io/raw/master/img/gsa_scdata7.png)
 
-*Fig.  Web report of VISION (Signature scores are computed using the expression matrix)*
+*Fig 4. Web report of VISION (Signature scores are computed using the expression matrix)*
 
 ## References
 
